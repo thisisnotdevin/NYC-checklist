@@ -1,0 +1,38 @@
+.search{
+	width: 33%;
+	margin: 1rem;
+	border: none;
+	background:#f8f7fa;
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+
+}
+.search::placeholder {
+    color: #b4adb4;
+	font-size: 1.1rem;
+}
+.search:focus {
+	background:rgba(0,0,0,0.1);
+    outline: none;
+}
+#map {
+	
+	position: relative;
+	height: 500px;
+	width: 900px;
+	outline: 1px black solid;
+	border-radius: 10px;
+	margin-bottom: 15px;
+	
+}
+iframe{
+	
+	position: relative;
+	height: 500px;
+	width: 900px;
+	outline: 1px black solid;
+	border-radius: 10px;
+	margin-bottom: 15px;
+
+}

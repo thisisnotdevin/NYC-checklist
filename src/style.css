@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+:root{
+	--red-primary: #dd4826;
+    --color-pink: #fbc5c4;
+    --color-cream: #f2e9df;
+    --dark-violet: #534859;
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	/* outline: 1px black solid; */
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	background: url(/img/bg1.jpg) fixed;
+	background-size: cover;      
+}
+.front-page{
+	background-size: cover;
+	height: 100vh;
+}
+
+.search{
+	width: 33%;
+	margin: 1rem;
+	border: none;
+	background:#f8f7fa;
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+
+}
+
+.search::placeholder {
+    color: #b4adb4;
+	font-size: 1.1rem;
+}
+.search:focus {
+	background:rgba(0,0,0,0.1);
+    outline: none;
+}
+.navbar{
+	display: flex;
+    justify-content: space-evenly;
+	height: 80px;
+	width: 100%;
+	background: white;
+}
+.navbar .logo-section{
+	padding: 20px 100px;
+}
+.navbar div{
+	padding: 20px 60px;
+}
+.navbar .logo{
+	width: 160px;
+	height: auto;
+	border: double;
+}
+#map {
+	
+	position: relative;
+	height: 500px;
+	width: 900px;
+	outline: 1px black solid;
+	border-radius: 10px;
+	margin-bottom: 15px;
+	
+}
+iframe{
+	
+	position: relative;
+	height: 500px;
+	width: 900px;
+	outline: 1px black solid;
+	border-radius: 10px;
+	margin-bottom: 15px;
+
+}
+.navbar ul{
+	float: right;
+	margin-right: 30px;
+	
+}
+.navbar .signin{
+	background:#534859;
+	border-radius: 8px;
+	padding: none;
+	color: white;
+}
+.navbar .signin:hover{
+	background:#746c79;
+	border-radius: 10px;
+}
+.navbar li{
+	margin: 0 8px;
+	display: inline;
+	line-height: 80px;
+}
+.navbar a{
+	font-size: 20px;
+	font-family:  sans-serif;
+	color: black;
+	padding: 6px 13px;
+	text-decoration: none;
+	box-shadow: inset 0 0 0 1px rgb(43 129 203 / 24%);
+	border-radius: 8px;
+}
+.navbar a.active,
+.navbar a:hover{
+	
+	border-radius: 10px;
+	box-shadow: 0 0 0 1px var(--wsr-color-20,#4eb7f5) inset;
+}
+.navbar button {
+	display: none;
+}
+.front-page .center{
+	position: absolute;
+	left: 50%;
+	top: 60%;
+	transform: translate(-50%, -55%);
+	font-family: sans-serif;
+	user-select: none;
+}
+.center{
+    display: grid;
+	grid-template-columns: 1fr  200px;
+	align-items: center;
+	justify-self: center;
+	margin: 0;
+	width: 70%;
+	position: fixed;
+}
+.center-left{
+    display: grid;
+	margin-left: 3rem;
+}
+.center .center-left ul{
+    grid-template-columns: repeat(4,1.2fr);
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+}
+.center .center-right button{
+	margin-left: 0px;
+	margin-top: 10px;
+}
+.center-right div{
+	align-items: center;
+	justify-items: center;
+	position: relative;
+	overflow: hidden;
+	margin-top: 0px;
+}
+.corn-guy{
+    width: auto;
+}
+.corn-guy:hover {
+	transform: scale(1.03);
+	transition: .3s ease;
+}
+.center h1{
+	color: black;
+	font-size: 70px;
+	width: 900px;
+	font-weight: bold;
+	text-align: center;
+}
+.center h2{
+	color: black;
+	font-size: 70px;
+	font-weight: bold;
+	margin-top: 10px;
+	width: 885px;
+	text-align: center;
+}
+.center button{
+	margin: 35px 380px;
+}
+.center .center-left ul img {
+	height: 45px;
+}
+.center .center-left li{
+    display: inline-flex;
+	align-items: center;
+    margin: 8px;
+    background:white;
+	border-radius: 15px;
+    justify-content: center;
+	padding: 0.7rem;
+	outline: 1px #f2e9df solid;
+}
+.center .center-left li:hover{
+	
+		transform: scale(1.02);
+		transition: .1s ease;
+}
+.center .center-left ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.trending-page {
+	
+	height: 100%;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+	align-items: center;
+	justify-self: center;
+	width: 100%;
+}
+.trending-page div{
+	padding: 2rem;
+	align-items: center;
+	justify-self: center;
+}
+#button {
+	height: 50px;
+	width: 150px;
+	font-size: 18px;
+	font-weight: 600;
+	color: white;
+	background: red;
+	outline: none;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	transition: .4s;
+}
+
+ .center button:hover{
+	background: #cc0000;
+}
+
+.trending-page img {
+	padding: 12px;
+	border-radius: 25px;
+	align-items: center;
+	justify-self: center;
+}
+
+.trending-page img:hover {
+	transform: scale(1.03);
+	transition: .3s ease;
+
+}
+
+.trending-page h1 {
+	background:rgba(0,0,0,0.2);
+	color: white;
+	padding: 1rem;
+	border-radius: 10px;
+}
+
+/*----------------------------------about page----------------------------------*/
+
+.cards{
+	display: flex;
+	margin-top: 10%;
+	align-items: center;
+	justify-content: center;
+	min-height: 400px;
+    grid-template-columns: 33% 33% 33%;
+	width: 100%;
+}
+.cards div {
+	height: 615px;
+	width: 535px;
+	padding: 20px 35px;
+	border-radius: 20px;
+	margin: 10px;
+	position: relative;
+	overflow: hidden;
+	background: #fff;
+	text-align: center;
+}
+.cards h3{
+	font-size: 1.4rem;
+}
+.cards i{
+	font-size: 50px;
+	display: block;
+	text-align: center;
+	margin: 25px 0px;
+}
+.cards p {
+	margin: 20px;
+}
+
+.cards a {
+	color: black;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	padding: 6px 13px;
+	background:rgba(0,0,0,0.2);
+	border-radius: 13px;
+	
+}
+
+.cards a:hover {
+background:rgba(0,0,0,0.4);
+}
+
+.cards img {
+	height: 35%;
+	text-align: center;
+	margin: 10px 0px;
+}
+
+.moreText{
+    display: none;
+}
+
+.text.show-more .moreText{
+    display: inline;
+}
+
+/*----------------------------------login page----------------------------------*/
+
+.loginBox {
+	display: flex;
+	margin-top: 6%;
+	align-items: center;
+	justify-content: center;
+	min-height: 400px;
+	width: 100%;
+
+	
+}
+.loginBox input {
+	display: block;
+	outline: none;
+	margin: 2rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background: #fff;
+	width: 50%;
+	margin-left: auto;
+    margin-right: auto;
+	height:50px;
+    font-size:12pt;
+	
+}
+.loginBox div {
+	height: 655px;
+	width: 535px;
+	padding: 20px 35px;
+	border-radius: 20px;
+	margin: 10px;
+	position: relative;
+	overflow: hidden;
+	background: #fff;
+	text-align: center;
+	
+}
+.loginBox h3{
+	font-size: 1.4rem;
+}
+
+.loginBox img {
+	height: 30%;
+	text-align: center;
+	margin: 10px 0px;
+}
+.loginBox .login-button{
+	margin-top: 1rem;
+	width: 50%;
+}
+.loginBox .form__text a {
+	color: #534859;
+
+}
+/*----------------------------------feedback page----------------------------------*/
+
+.feedbackBox {
+	display: flex;
+	margin-top: 6%;
+	align-items: center;
+	justify-content: center;
+	min-height: 400px;
+	width: 100%;
+	
+}
+
+.feedbackBox div {
+	height: 655px;
+	width: 30%;
+	padding: 20px 35px;
+	border-radius: 20px;
+	margin: 10px;
+	position: relative;
+	overflow: hidden;
+	background: #fff;
+	text-align: center;
+}
+.feedbackBox h3{
+	font-size: 1.4rem;
+}
+.feedbackBox textarea {
+	padding: 5px 15px;
+	border: 1px solid black;
+	border-radius: 3px;
+	margin: 1rem;
+	width: 80%;
+}
+.feedbackBox div input {
+	margin-left: 15px;
+}
+.feedbackBox img {
+	height: 30%;
+	text-align: center;
+	margin: 10px 0px;
+}
+.feedbackBox .send-feedback {
+	margin-top: 1rem;
+	width: 80%;
+}
+.dropdown-menu{
+	display: none;
+}
+@media screen and (max-width: 1600px) {
+	.navbar li {
+		display: none;
+	}
+	.navbar button {
+		display: flex;
+		font-size: 40px;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+	}
+	
+	.dropdown{
+		position: relative;
+		
+	}
+	.dropdown-menu{
+		display: grid;
+		position: absolute;
+		top: calc(100% + .15rem);
+		background-color: white;
+		box-shadow: 0 2px 5px 0 rgb(0, 0, 0, .3);
+		opacity: 0;
+		pointer-events: none;
+		transform: translateY(-10px);
+		transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+		
+	}
+	.dropdown.active > #link + .dropdown-menu {
+		opacity: 1;
+		transform: translateY(0);
+		pointer-events: auto;
+		position: absolute;
+		
+	}
+	.dropdown-menu a {
+		margin: 8px;
+		
+	}
+	.center{
+		margin-top: 400px;
+		display: inline;
+	}
+	.cards {
+		display: block;
+		height: 200px;
+	}
+	.cards div {
+		margin-left: 30%;
+	}
+	
+}
+
+/*----------------------------------trending page----------------------------------*/

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>NYC Checklist</title>
+	<!--link rel="stylesheet" href="style.css"-->
+
+	<link rel="stylesheet" href="styling/allpages.css">
+	<link rel="stylesheet" href="styling/index.css">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="script.js" defer></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeKR3s1E42hqIl6V8yR0UiMHJZxXbeAkk&callback=initMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAeKR3s1E42hqIl6V8yR0UiMHJZxXbeAkk&callback=initMap" async defer></script>
+</head>
+<body>
+ 
+	<div class="front-page">
+			<nav style="justify-content:space-between" class="navbar">
+                
+                <!---logo and navbar--->
+                <div class="logo-section">
+				    <img class="logo" src="/img/logo.png">
+                </div>      
+                <input id="searchInput" class="search" type="text" placeholder="Search events">      
+				<ul>
+					<li><a class="active" href="#">Home</a></li>
+					<li><a href="./components/about.html">About</a></li>
+					<li><a href="./components/trending.html">Trending</a></li>
+					<li><a href="./components/feedback.html">Feedback</a></li>
+                    <li><a class="signin" href="./components/login.html">Sign In</a></li>
+                    <div class="dropdown" data-dropdown>
+                        <button id="link" class="material-symbols-outlined" data-dropdown-button>menu</button>
+                        <div class="dropdown-menu">
+                            <a href="index.html">Home</a>
+					        <a href="./components/about.html">About</a>
+					        <a href="./components/trending.html">Trending</a>
+					        <a href="./components/feedback.html">Feedback</a>
+                            <a class="signin" href="./components/login.html">Sign In</a>
+                        </div>
+                    </div>
+
+				</ul>
+              
+			</nav>
+            <!---frontpage--->
+			<div class="center">
+                
+                <div class="center-left">
+                    
+                  <div id="map"></div>
+
+                 <!--shows the nearby restaurants in manhattan-->
+
+                  <!-- <iframe
+                    frameborder="0" style="border:0"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/search?key=AIzaSyAeKR3s1E42hqIl6V8yR0UiMHJZxXbeAkk&q=restaurants+in+Manhattan"
+                    allowfullscreen>
+                    </iframe>
+                 -->
+                <ul>
+					<li>
+                        <img src="/img/music.png">
+                        <a onclick="getMusic()" href="#">Music</a>
+                    </li>
+					<li>
+                        <img src="/img/artculture.png">
+                        <a onclick="getArt()" href="#">Arts & Culture</a>
+                    </li>
+					<li>
+                        <img src="/img/travel.png">
+                        <a  onclick="getOutdoor()" href="#">Travel & Outdoor</a>
+                    </li>
+                    <li>
+                        <img src="/img/food.png">
+                        <a  onclick="getRestaurant()" href="#">Food & Drinks</a>
+                    </li>
+					<li>
+                        <img src="/img/fitness.png">
+                        <a  onclick="getExercise()" href="#">Health & Fitness</a>
+                    </li>
+					<li>
+                        <img src="/img/game.png">
+                        <a  onclick="getEntertainment()" href="#">Entertainment</a>
+                    </li>
+                    <li>
+                        <img src="/img/attraction.png">
+                        <a  onclick="getFun()" href="#">Attraction & Tours</a>
+                    </li>
+                    
+                    
+				</ul>
+                
+                 
+            </div>
+            <div class="center-right">
+                <div class="vertical-menu">
+                    <a href="#" class="active">Results</a>
+                    
+                    
+                </div>
+                <a href="./components/about.html"><img class="corn-guy" src="/img/corn.png" ></a>
+                <div>
+                    <a href=./components/trending.html>
+                        <button id="button">Explore</button>
+                    </a> 
+                </div>
+            </div> 
+            </div>
+            
+	</div>
+    
+</body>
+</html>

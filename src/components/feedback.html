@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>NYC Checklist</title>
+	<!--link rel="stylesheet" href="../style.css"-->
+
+	<link rel="stylesheet" href="../styling/allpages.css">
+	<link rel="stylesheet" href="../styling/feedback.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+	<div id="front-page">
+			<nav style="justify-content:space-between" class="navbar">
+            
+                <div>
+				    <img class="logo" src="/img/logo.png">
+                </div>  
+				
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="trending.html">Trending</a></li>
+					<li><a class="active" href="feedback.html">Feedback</a></li>
+					<li><a class="signin" href="login.html">Sign In</a></li>
+					<div class="dropdown" data-dropdown>
+                        <button id="link" class="material-symbols-outlined" data-dropdown-button>menu</button>
+                        <div class="dropdown-menu">
+							<a href="../index.html">Home</a>
+					        <a href="about.html">About</a>
+					        <a href="trending.html">Trending</a>
+					        <a href="feedback.html">Feedback</a>
+                            <a href="login.html">Sign In</a>
+                        </div>
+                    </div>
+				</ul>
+			</nav>
+			<div class="feedbackBox">
+				<div>
+					<img src="/img/feedback-img.png">
+					<h3>Send up some feedback!</h3>
+					<br>
+					<!--form is using an encrypted string so nobody can access it from the backend-->
+					<form action="https://formsubmit.co/0e1ce550ebf32340be1e419755557f6f" method="POST" > 
+						
+					<section class="formRow">
+						<section class="nameCol">
+							<p>Full name</p>
+							<input name="Full Name" type="text" required>	
+						</section>
+						
+						<section class="emailCol">
+							<p>Email Address</p>
+							<input name="Email" type="email"  required>
+						</section>
+					</section>
+					<section class="SubjectCol">
+						<p>Subject</p>
+						<input name="Subject" type="text"  required>	
+					</section>
+					<p>Message</p>
+						<textarea name="Message" class="feedback-text-box" rows="10" cols="50"></textarea>	
+						
+						<select name="Inquiry Type">
+							<option>Comment</option>
+							<option>Bug</option>
+							<option>Other</option>
+						</select>
+							<br>
+							<button type="submit" id="button" class="send-feedback">Send Feedback</button>
+					</form>
+					
+				</div>
+			</div> 
+	</div>
+	
+	<script src="../script.js"></script>
+</body>
+</html>

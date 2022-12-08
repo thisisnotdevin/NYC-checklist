@@ -1,0 +1,220 @@
+<!--
+	TODO LIST
+	*	SHOW ALL EVENTS BY DEFAULT, WHEN LOGGED IN, SHOW ONLY EVENTS PREFERRED BY USER
+	*	ADD SLIDING CARDS FOR TRENDING EVENTS (USE PLACEHOLDERS)
+	*	ADD MULTIPLE SLIDING CARDS BASED ON DIFFERENT CRITERIAS (TRENDING, NEAR, PRICE, UPCOMING)
+	*	ADD A SHOW ON MAP, MORE INFO, AND SAVE EVENT BUTTON ON CARDS (x)
+	* 	ADD FUNCTIONALITY TO BUTTONS
+			-	SHOW ON MAP BUTTON REDIRECTS USER TO INDEX.HTML WITH LOCATION OF EVENT CENTERED ON MAP
+			-	MORE INFO BUTTON REDIRECTS USER TO URL OF EVENT
+			-	SAVE EVENT BUTTON ADDS DESIRED EVENTS TO A LIST OF SAVED EVENTS
+	*	ADD TAG(S) ON CARD BASED ON THE TYPE OF EVENT IT IS, MUSIC ART FREE ETC.
+	*		-	Make container for image, category, and buttons
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>NYC Checklist</title>
+	<!--link rel="stylesheet" href="../style.css"-->
+	
+	<link rel="stylesheet" href="../styling/allpages.css">
+	<link rel="stylesheet" href="../styling/trending.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" >
+</head>
+<body>
+	<div class="front-page">
+			<nav style="justify-content:space-between" class="navbar">
+                
+                <!---logo and background from canva--->
+                <div>
+				    <img class="logo" src="/img/logo.png">
+                </div>  
+		
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a class="active" href="trending.html">Trending</a></li>
+					<li><a href="feedback.html">Feedback</a></li>
+					<li><a class="signin" href="login.html">Sign In</a></li>
+					<div class="dropdown" data-dropdown>
+                        <button id="link" class="material-symbols-outlined" data-dropdown-button>menu</button>
+                        <div class="dropdown-menu">
+                            <a href="../index.html">Home</a>
+					        <a href="about.html">About</a>
+					        <a href="trending.html">Trending</a>
+					        <a href="feedback.html">Feedback</a>
+                            <a href="login.html">Sign In</a>
+                        </div>
+                    </div>
+				</ul>
+			</nav>	
+
+			
+			<!--Trending Section-->
+			<div class="container">
+				<div class="header">
+					<h1><i class="fa-solid fa-fire fa-lg"></i>Trending Right Now <i class="fa-solid fa-fire fa-lg"></i></h1>
+				</div>
+
+				<div class="card">
+					<div class="imgBox"><img class="img" src="/img/event1.png"></div>
+					<div class="infobox">
+						<div class="info">
+							<span><h4>Event Name and Date</h4>
+							<h4>Address Here</h4>
+							<p>Event Information Here</p></span>
+						</div>
+						
+						<div class="btnbox">
+							<button class="btn"><i class="fa-regular fa-star fa-lg"></i></button>
+							<button class="btn"><i class="fa-regular fa-rectangle-list fa-lg"></i></i></button>
+							<button class="btn"><i class="fa-solid fa-map fa-lg"></i></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="imgBox"><img class="img" src="/img/event2.png"></div>
+					<div class="infobox">
+						<div class="info">
+							<span><h4>Event Name and Date</h4>
+							<h4>Address Here</h4>
+							<p>Event Information Here</p></span>
+						</div>
+						
+						<div class="btnbox">
+							<button class="btn"><i class="fa-regular fa-star fa-lg"></i></button>
+							<button class="btn"><i class="fa-regular fa-rectangle-list fa-lg"></i></i></button>
+							<button class="btn"><i class="fa-solid fa-map fa-lg"></i></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="imgBox"><img class="img" src="/img/event3.png"></div>
+					<div class="infobox">
+						<div class="info">
+							<span><h4>Event Name and Date</h4>
+							<h4>Address Here</h4>
+							<p>Event Information Here</p></span>
+						</div>
+						
+						<div class="btnbox">
+							<button class="btn"><i class="fa-regular fa-star fa-lg"></i></button>
+							<button class="btn"><i class="fa-regular fa-rectangle-list fa-lg"></i></i></button>
+							<button class="btn"><i class="fa-solid fa-map fa-lg"></i></button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="pagerbox">
+					<button class="pagerbtn"><i class="fa-solid fa-chevron-left fa-2x"></i></button>
+					<button class="pagerbtn"><i class="fa-solid fa-circle"></i></button>
+					<button class="pagerbtn"><i class="fa-solid fa-circle"></i></button>
+					<button class="pagerbtn"><i class="fa-solid fa-circle"></i></button>
+					<button class="pagerbtn"><i class="fa-solid fa-chevron-right fa-2x"></i></button>
+				</div>
+			</div>
+
+			<!--Table Section-->
+			<div class="container">
+				<div class="centerbox">
+					<button class="btn">For You</button>
+					<button class="btn">All Events</button>
+					<button class="btn">Discover</button>
+				</div>
+				<div class="centerbox"><input id="searchInput" class="search" type="text" placeholder="Search events"></div>
+				
+				<div class="section">
+					<div class="contentbox">						
+						<div class="header"><h4>Categories</h4></div>
+						<div class="optionbox1">
+							<span class="options1"><label for="music">Music<i class="fa-solid fa-music"></i></label>
+							<input type="checkbox" id="music" name="music" value="musicplaceholder"></span>
+							<span class="options1"><label for="artsCult">Arts&Culture<i class="fa-solid fa-masks-theater"> </i></label>
+							<input type="checkbox" id="artsCult" name="artsCult" value="artsplaceholder"></span>
+							<span class="options1"><label for="travel">Travel&Outdoor<i class="fa-solid fa-person-hiking"> </i></label>
+							<input type="checkbox" id="travel" name="travel" value="travelplaceholder"></span>
+							<span class="options1"><label for="food">Food&Drinks<i class="fa-solid fa-utensils"> </i></label>	
+							<input type="checkbox" id="food" name="food" value="foodplaceholder"></span>
+							<span class="options1"><label for="health">Health&Fitness<i class="fa-solid fa-dumbbell"> </i></label>
+							<input type="checkbox" id="health" name="health" value="healthplaceholder"></span>
+							<span class="options1"><label for="entertainment">Entertainment<i class="fa-solid fa-film"></i> </label>	
+							<input type="checkbox" id="entertainment" name="entertainment" value="entertainmentplaceholder"></span>
+							<span class="options1"><label for="attraction">Attraction&Tour<i class="fa-solid fa-earth-americas"> </i></label>
+							<input type="checkbox" id="attraction" name="attraction" value="attractionplaceholder"></span>
+						</div>
+
+						<div class="header"><h4>Price</h4></div> 
+						<div class="optionbox2">
+							<span class="options2"><label for="free"><h5>Free</h5></label>
+							<input type="checkbox" id="free" name="free" value="free"></span>
+							<span class="options2"><label for="paid"><h5>Paid</h5></label>	
+							<input type="checkbox" id="paid" name="paid" value="paid"></span>
+							<span class="options2"><label for="both"><h5>Both</h5></label>
+							<input type="checkbox" id="both" name="both" value="both"></span>
+						</div>
+						
+						<div class="header"><h4>Date</h4></div>
+						<div class="optionbox2">
+							<input type="date" id="start" name="trip-start" value="2022-12-03">
+						</div>
+						
+					</div>
+				</div>
+
+				<div class="section">
+					<div class="contentbox">
+						<div class="header"><h4>Event List</h4></div>
+						<div class="eventlist">
+							<div class="event">Event 1</div>
+							<div class="event">Event 2</div>
+							<div class="event">Event 3</div>
+							<div class="event">Event 4</div>
+							<div class="event">Event 5</div>
+							<div class="event">Event 6</div>
+							<div class="event">Event 7</div>
+							<div class="event">Event 8</div>
+							<div class="event">Event 9</div>
+							<div class="event">Event 10</div>		
+						</div>
+					
+						<div class="eventpagerbox">
+							<button class="pagerbtn"><i class="fa-solid fa-chevron-left fa-2x"></i></button>
+							<button class="numericpagerbtn">1</button>
+							<button class="numericpagerbtn">2</button>
+							<button class="numericpagerbtn">3</button>
+							<button class="pagerbtn"><i class="fa-solid fa-chevron-right fa-2x"></i></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="section">
+					<div class="contentbox">
+						<div class="header"><h4>Information</h4></div>
+						<div class="imgBox">
+							<img class="img" src="/img/logo.png">
+						</div>
+						<div class="infobox">
+							<div class="info">
+								<span><h4>Event Name and Date</h4>
+								<h4>Address Here</h4>
+								<p>Event Information Here</p></span>
+							</div>
+							
+							<div class="btnbox">
+								<button class="btn"><i class="fa-regular fa-star fa-lg"></i></button>
+								<button class="btn"><i class="fa-regular fa-rectangle-list fa-lg"></i></i></button>
+								<button class="btn"><i class="fa-solid fa-map fa-lg"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<script src="../script.js"></script>
+	<script src="https://kit.fontawesome.com/2ff391b354.js" crossorigin="anonymous"></script>
+</body>
+</html>
+

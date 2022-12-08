@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>NYC Checklist</title>
+	<!--link rel="stylesheet" href="../style.css"-->
+
+	<link rel="stylesheet" href="../styling/allpages.css">
+	<link rel="stylesheet" href="../styling/login.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+	<div class="front-page">
+			<nav  style="justify-content:space-between" class="navbar">
+                
+                <!---logo and background from canva--->
+                <div>
+				    <img class="logo" src="/img/logo.png">
+                </div>  
+				
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="trending.html">Trending</a></li>
+					<li><a href="feedback.html">Feedback</a></li>
+                    <li><a class="signin" href="login.html">Sign In</a></li>
+					<div class="dropdown" data-dropdown>
+                        <button id="link" class="material-symbols-outlined" data-dropdown-button>menu</button>
+                        <div class="dropdown-menu">
+                            <a href="../index.html">Home</a>
+					        <a href="about.html">About</a>
+					        <a href="trending.html">Trending</a>
+					        <a href="feedback.html">Feedback</a>
+                            <a href="login.html">Sign In</a>
+                        </div>
+                    </div>
+				</ul>
+			</nav>
+			<div class="loginBox">
+			
+
+				<div>
+					<img src="/img/login-dog.png">
+					<h3>Log In</h3>
+					  <input type="email" placeholder="Email" autofocus style="padding-left: 10px;">
+					  <input type="password" placeholder="Password" style="padding-left: 10px;">
+					  <button id="button" class="login-button">Login to Account</button> <br><br>
+						<p class="form__text">
+							<a href="#" class="form__link">Forgot your password?</a>
+						</p>
+						<br>
+						<p class="form__text">
+							<a href="#" class="form__link" id="linkCreateAccount">Don't have an account? Create account</a>
+						</p>
+						
+				</div>
+			
+			</div> 
+			
+	</div>
+	<script src="../script.js"></script>
+</body>
+</html>
